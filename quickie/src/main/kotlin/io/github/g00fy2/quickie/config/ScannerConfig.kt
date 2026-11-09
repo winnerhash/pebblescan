@@ -17,8 +17,11 @@ public class ScannerConfig(
   internal val useFrontCamera: Boolean,
   internal val showCloseButton: Boolean,
   internal val keepScreenOn: Boolean,
+  internal val showGalleryButton: Boolean,
+  internal val autoZoom: Boolean,
 ) {
 
+  @Suppress("TooManyFunctions") // One setter per supported scanner option.
   public class Builder {
     private var barcodeFormats: List<BarcodeFormat> = listOf(BarcodeFormat.FORMAT_ALL_FORMATS)
     private var overlayStringRes: Int = 0
@@ -29,6 +32,8 @@ public class ScannerConfig(
     private var useFrontCamera: Boolean = false
     private var showCloseButton: Boolean = false
     private var keepScreenOn: Boolean = false
+    private var showGalleryButton: Boolean = false
+    private var autoZoom: Boolean = false
 
     /**
      * Set a list of interested barcode formats. List must not be empty.
@@ -78,6 +83,12 @@ public class ScannerConfig(
      */
     public fun setKeepScreenOn(enable: Boolean): Builder = apply { keepScreenOn = enable }
 
+    /** Show a system photo picker button without requesting storage permission. */
+    public fun setShowGalleryButton(enable: Boolean): Builder = apply { showGalleryButton = enable }
+
+    /** Use stable potential code locations to apply bounded camera zoom. */
+    public fun setAutoZoomEnabled(enable: Boolean): Builder = apply { autoZoom = enable }
+
     /**
      * Build the BarcodeConfig required by the ScanBarcode ActivityResultContract.
      */
@@ -92,6 +103,8 @@ public class ScannerConfig(
         useFrontCamera = useFrontCamera,
         showCloseButton = showCloseButton,
         keepScreenOn = keepScreenOn,
+        showGalleryButton = showGalleryButton,
+        autoZoom = autoZoom,
       )
   }
 

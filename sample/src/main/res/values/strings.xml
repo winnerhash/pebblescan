@@ -1,10 +1,47 @@
 <resources>
-  <string name="app_name" translatable="false">Quickie Sample</string>
+  <string name="brand_name" translatable="false">PebbleScan</string>
+  <string name="offline_badge">Works offline</string>
+  <string name="home_title">Little codes,\nbig discoveries.</string>
+  <string name="home_subtitle">Point your camera.\nOr pick a photo.</string>
+  <string name="qr_card_hint">Read QR codes and product barcodes.</string>
+  <string name="start_scanning">Let’s scan</string>
+  <string name="gallery_card_title">Photos</string>
+  <string name="gallery_card_hint">Photos and screenshots welcome.</string>
+  <string name="barcode_card_hint">Read the lines on everyday things.</string>
+  <string name="footer_note">A little discovery for your pocket.</string>
+  <string name="app_name">PebbleScan</string>
 
-  <string name="qr_button" translatable="false">QR-Code Scanner</string>
-  <string name="custom_button" translatable="false">Custom Scanner</string>
-  <string name="ok_action" translatable="false">OK</string>
-  <string name="open_action" translatable="false">Open</string>
-  <string name="scan_barcode" translatable="false">Scan barcode</string>
-  <string name="barcode_format" translatable="false">BarcodeFormat</string>
+  <string name="qr_button">Scan a code</string>
+  <string name="custom_button">Scan barcode</string>
+  <string name="gallery_button">Scan from photos</string>
+  <string name="ok_action">OK</string>
+  <string name="open_action">Open link</string>
+  <string name="copy_action">Copy</string>
+  <string name="scan_barcode">Scan barcode</string>
+  <string name="barcode_format">Camera barcode format</string>
+  <string name="format_all">All formats</string>
+  <string name="format_qr">QR code</string>
+  <string name="missing_permission">Allow camera access to scan with the camera.</string>
+  <string name="scan_error">Could not scan: %1$s</string>
+  <string name="scan_result">Scan result</string>
+  <string name="empty_result">This code has no text content.</string>
+  <string name="copied">Copied</string>
+  <string name="no_browser">No app is available to open this link.</string>
+  <string name="scan_any_code">Point at a QR code or barcode</string>
+  <string name="shortcut_scan">Scan</string>
+  <string name="share_action">Share</string>
+  <string name="close_action">Close</string>
+  <string name="scan_again">Scan another</string>
+  <string name="link_result">Link</string>
+  <string name="wifi_result">Wi-Fi details</string>
+  <string name="wifi_name_label">Network name</string>
+  <string name="wifi_password_label">Password</string>
+  <string name="copy_wifi_name">Copy network name</string>
+  <string name="copy_wifi_password">Copy Wi-Fi password</string>
+  <string name="no_wifi_password">No password</string>
+  <string name="raw_result_label">Full contents</string>
+  <string name="invalid_shared_image">Share an image with a QR code or barcode to this app.</string>
+  <string name="add_tile">Add Quick Settings shortcut</string>
+  <string name="add_tile_help">Open Quick Settings, choose Edit, then add PebbleScan. You can also long-press the app icon to scan or pick a photo.</string>
+  <string name="licenses_title">Open-source notices</string>
 </resources>

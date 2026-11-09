@@ -1,50 +1,291 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
-    tools:context=".MainActivity"
-    >
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    tools:context=".MainActivity">
 
-  <Button
-      android:id="@+id/qr_scanner_button"
+  <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_marginBottom="16dp"
-      android:layout_marginEnd="64dp"
-      android:layout_marginStart="64dp"
-      android:text="@string/qr_button"
-      />
+      android:orientation="vertical"
+      android:paddingHorizontal="24dp"
+      android:paddingTop="16dp"
+      android:paddingBottom="24dp">
 
-  <Button
-      android:id="@+id/custom_scanner_button"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_marginBottom="4dp"
-      android:layout_marginEnd="64dp"
-      android:layout_marginStart="64dp"
-      android:layout_marginTop="16dp"
-      android:text="@string/custom_button"
-      />
-
-  <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/barcode_formats_text_input_layout"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:hint="@string/barcode_format"
-      style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
-      >
-
-    <AutoCompleteTextView
-        android:id="@+id/barcode_formats_auto_complete_text_view"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/home_header"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="none"
-        tools:ignore="LabelFor"
-        />
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
-  </com.google.android.material.textfield.TextInputLayout>
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:fontFamily="sans-serif-black"
+          android:letterSpacing="-0.04"
+          android:text="@string/brand_name"
+          android:textColor="@color/ink"
+          android:textSize="29sp" />
 
-</LinearLayout>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/bg_chip"
+          android:drawablePadding="5dp"
+          android:gravity="center"
+          android:text="@string/offline_badge"
+          android:textColor="@color/ink"
+          android:textSize="12sp"
+          app:drawableStartCompat="@drawable/ic_spark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/home_hero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:accessibilityHeading="true"
+            android:fontFamily="sans-serif-medium"
+            android:lineSpacingExtra="4dp"
+            android:text="@string/home_title"
+            android:textColor="@color/ink"
+            android:textSize="30sp"
+            tools:targetApi="p" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/home_subtitle"
+            android:textAppearance="@style/TextAppearance.Quickie.Body" />
+      </LinearLayout>
+
+      <ImageView
+          android:layout_width="128dp"
+          android:layout_height="144dp"
+          android:importantForAccessibility="no"
+          android:src="@drawable/illustration_discovery"
+          tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/qr_scanner_button"
+        style="@style/Widget.Quickie.Card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/qr_button"
+        app:cardBackgroundColor="@color/lavender">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:minHeight="172dp"
+          android:orientation="vertical"
+          android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/qr_button"
+            android:textAppearance="@style/TextAppearance.Quickie.Title"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/qr_card_hint"
+            android:textAppearance="@style/TextAppearance.Quickie.Body" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_action"
+              android:fontFamily="sans-serif-medium"
+              android:text="@string/start_scanning"
+              android:textColor="@color/paper"
+              android:textSize="14sp" />
+
+          <Space android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+
+          <ImageView
+              android:layout_width="28dp"
+              android:layout_height="28dp"
+              android:importantForAccessibility="no"
+              android:src="@drawable/ic_arrow"
+              tools:ignore="ContentDescription" />
+        </LinearLayout>
+      </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/secondary_actions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+      <com.google.android.material.card.MaterialCardView
+          android:id="@+id/gallery_button"
+          style="@style/Widget.Quickie.Card"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_marginEnd="7dp"
+          android:layout_weight="1"
+          android:contentDescription="@string/gallery_button"
+          app:cardBackgroundColor="@color/peach">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="178dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+          <ImageView
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:importantForAccessibility="no"
+              android:src="@drawable/ic_photo_playful"
+              tools:ignore="ContentDescription" />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="14dp"
+              android:text="@string/gallery_card_title"
+              android:textAppearance="@style/TextAppearance.Quickie.Title" />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="5dp"
+              android:text="@string/gallery_card_hint"
+              android:textAppearance="@style/TextAppearance.Quickie.Body" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <com.google.android.material.card.MaterialCardView
+          android:id="@+id/custom_scanner_button"
+          style="@style/Widget.Quickie.Card"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_marginStart="7dp"
+          android:layout_weight="1"
+          android:contentDescription="@string/custom_button"
+          app:cardBackgroundColor="@color/mint">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="178dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+          <ImageView
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:importantForAccessibility="no"
+              android:src="@drawable/ic_barcode_playful"
+              tools:ignore="ContentDescription" />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="14dp"
+              android:text="@string/custom_button"
+              android:textAppearance="@style/TextAppearance.Quickie.Title" />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="5dp"
+              android:text="@string/barcode_card_hint"
+              android:textAppearance="@style/TextAppearance.Quickie.Body" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/barcode_formats_text_input_layout"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="@string/barcode_format"
+        app:boxCornerRadiusBottomEnd="18dp"
+        app:boxCornerRadiusBottomStart="18dp"
+        app:boxCornerRadiusTopEnd="18dp"
+        app:boxCornerRadiusTopStart="18dp">
+
+      <com.google.android.material.textfield.MaterialAutoCompleteTextView
+          android:id="@+id/barcode_formats_auto_complete_text_view"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:inputType="none"
+          android:minHeight="60dp"
+          android:paddingStart="18dp"
+          android:paddingEnd="48dp"
+          android:textColor="@color/ink"
+          android:textSize="15sp"
+          tools:ignore="LabelFor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/add_tile_button"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:minHeight="48dp"
+        android:text="@string/add_tile" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/licenses_button"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:text="@string/licenses_title" />
+
+    <TextView
+        android:id="@+id/home_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:drawablePadding="8dp"
+        android:gravity="center"
+        android:text="@string/footer_note"
+        android:textColor="@color/ink_soft"
+        android:textSize="12sp"
+        app:drawableTopCompat="@drawable/ic_dots" />
+  </LinearLayout>
+</ScrollView>

@@ -41,6 +41,7 @@ dependencies {
   implementation(libs.androidx.camera)
   implementation(libs.androidx.cameraLifecycle)
   implementation(libs.androidx.cameraPreview)
+  implementation(libs.zxing.core)
 
   add("bundledImplementation", libs.mlkit.barcodeScanning)
   add("unbundledImplementation", libs.mlkit.barcodeScanningGms)

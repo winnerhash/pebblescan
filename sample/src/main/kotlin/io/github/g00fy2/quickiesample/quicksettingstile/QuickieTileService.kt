@@ -11,6 +11,7 @@ import androidx.annotation.RequiresApi
 import androidx.core.service.quicksettings.PendingIntentActivityWrapper
 import androidx.core.service.quicksettings.TileServiceCompat
 import io.github.g00fy2.quickiesample.MainActivity
+import io.github.g00fy2.quickiesample.R
 
 // optional service to allow launching the sample app from the quick settings
 @RequiresApi(Build.VERSION_CODES.N)
@@ -25,6 +26,7 @@ class QuickieTileService : TileService() {
     super.onStartListening()
     qsTile?.run {
       state = Tile.STATE_INACTIVE
+      label = getString(R.string.shortcut_scan)
       updateTile()
     }
   }
@@ -33,6 +35,7 @@ class QuickieTileService : TileService() {
     super.onClick()
 
     val intent = Intent(this, MainActivity::class.java).apply {
+      action = MainActivity.ACTION_SCAN
       addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
       putExtra(MainActivity.OPEN_SCANNER, true)
     }

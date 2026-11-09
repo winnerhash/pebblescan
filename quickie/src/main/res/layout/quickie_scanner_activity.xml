@@ -12,6 +12,13 @@
       android:layout_height="match_parent"
       />
 
+  <io.github.g00fy2.quickie.FrozenPreviewView
+      android:id="@+id/frozen_preview"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:importantForAccessibility="no"
+      android:visibility="gone" />
+
   <io.github.g00fy2.quickie.QROverlayView
       android:id="@+id/overlay_view"
       android:layout_width="match_parent"

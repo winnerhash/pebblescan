@@ -5,9 +5,9 @@ plugins {
 android {
   namespace = "io.github.g00fy2.quickiesample"
   defaultConfig {
-    applicationId = "io.github.g00fy2.quickiesample"
-    versionCode = 1
-    versionName = "1.0"
+    applicationId = providers.gradleProperty("sampleApplicationId").getOrElse("io.github.g00fy2.quickiesample.local")
+    versionCode = 12
+    versionName = "1.11"
   }
   buildTypes {
     getByName("release") {
@@ -33,6 +33,9 @@ android {
     buildConfig = true
     viewBinding = true
   }
+  testOptions {
+    unitTests.isIncludeAndroidResources = true
+  }
   lint {
     abortOnError = true
     warningsAsErrors = true
@@ -53,4 +56,8 @@ dependencies {
   implementation(project(":quickie"))
 
   implementation(libs.google.materialDesign)
+  testImplementation(libs.test.junit4)
+  testImplementation(libs.test.robolectric)
+  testImplementation(libs.androidx.cameraPreview)
+  testImplementation(libs.mlkit.barcodeScanning)
 }

@@ -143,7 +143,7 @@ private fun Intent.toQuickieContentType(rawBytes: ByteArray?, rawValue: String?)
 }
 
 internal fun Intent?.getRootException(): Exception {
-  return this?.let { IntentCompat.getParcelableExtra(it, EXTRA_RESULT_EXCEPTION, Exception::class.java) }
+  return this?.let { IntentCompat.getSerializableExtra(it, EXTRA_RESULT_EXCEPTION, Exception::class.java) }
     ?: IllegalStateException("Could retrieve root exception")
 }
 

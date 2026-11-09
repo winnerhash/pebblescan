@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-  <color name="ic_launcher_background">#3DDC84</color>
+<resources xmlns:tools="http://schemas.android.com/tools">
+  <color name="ic_launcher_background">#FFF8EB</color>
+  <color name="paper">#FFF8EB</color>
+  <color name="ink">#3D344B</color>
+  <color name="ink_soft">#62576A</color>
+  <color name="lavender">#E3DAFF</color>
+  <color name="peach">#FFDCCB</color>
+  <color name="mint">#DDF0DD</color>
+  <color name="lemon">#FFE69C</color>
+  <color name="purple">#6850A6</color>
+  <color name="outline_soft">#C6BBC9</color>
+  <color name="quickie_gray" tools:override="true">#FFF0BA</color>
 </resources>

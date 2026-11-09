@@ -20,6 +20,28 @@
      aosp settings app strings.
  -->
 <resources>
+  <string name="quickie_focus">点按画面对焦</string>
+  <string name="quickie_from_photos">相册</string>
+  <string name="quickie_close">返回工具页</string>
+  <string name="quickie_torch">打开手电筒</string>
+  <string name="quickie_torch_off">关闭手电筒</string>
+  <string name="quickie_zoom_initial">自动 · 1.0×\n按住滑动</string>
+  <string name="quickie_zoom_auto">自动 · %1$.1f×</string>
+  <string name="quickie_zoom_manual">手动 · %1$.1f×</string>
+  <string name="quickie_zoom_adjust">按住并沿扇形滑动调整倍率，轻点恢复自动</string>
+  <string name="quickie_zoom_hold">按住滑动</string>
+  <string name="quickie_zoom_hint">松手保持 · 轻点恢复自动</string>
+  <string name="quickie_zoom_control">%1$s\n%2$s</string>
+  <string name="quickie_zoom_value">%1$.1f×</string>
+  <string name="quickie_zoom_resume">恢复自动</string>
+  <string name="quickie_preview_gestures">点按对焦，双指缩放</string>
+  <string name="quickie_no_barcode_found">未发现二维码或条码，请选择更清晰的图片。</string>
+  <string name="quickie_choose_barcode">请选择要查看的识别结果</string>
+  <string name="quickie_tap_code">发现多个码，点击圆点查看</string>
+  <string name="quickie_frame_held">画面已定格，点击圆点查看</string>
+  <string name="quickie_scan_again">重新扫描</string>
+  <string name="quickie_view_code">查看第 %1$d 个码</string>
+  <string name="quickie_binary_barcode">二进制条码</string>
   <string name="quickie_scan_qr_code">"扫描二维码"</string>
   <string name="quickie_please_wait">"请稍候…"</string>
 </resources>

@@ -1,0 +1,53 @@
+PebbleScan — based on quickie
+
+Based on quickie by Thomas Wirth
+https://github.com/G00fY2/quickie
+
+The MIT License (MIT)
+
+Copyright (C) 2021 Thomas Wirth
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+associated documentation files (the "Software"), to deal in the Software without restriction,
+including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial
+portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT
+OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+Some upstream translations and icons originate from the Android Open Source Project and retain their Apache License 2.0 notices. The complete Apache-2.0 license is also included in this APK under assets/licenses/Apache-2.0.txt.
+
+Google ML Kit is used under its separate terms:
+https://developers.google.com/ml-kit/terms
+
+This notice is not an exhaustive third-party dependency audit.
+
+ZXing 3.5.4 (com.google.zxing:core)
+https://github.com/zxing/zxing
+Licensed under Apache License 2.0. See Apache-2.0.txt and ZXing-NOTICE.txt.
+
+--------------------------------------------------------------------------------
+NOTICES FOR BARCODE4J
+--------------------------------------------------------------------------------
+
+Barcode4J
+Copyright 2002-2010 Jeremias Märki
+Copyright 2005-2006 Dietmar Bürkle
+
+Portions of this software were contributed under section 5 of the
+Apache License. Contributors are listed under:
+http://barcode4j.sourceforge.net/contributors.html
+
+--------------------------------------------------------------------------------
+NOTICES FOR JCOMMANDER
+--------------------------------------------------------------------------------
+
+Copyright 2010 Cedric Beust cedric@beust.com

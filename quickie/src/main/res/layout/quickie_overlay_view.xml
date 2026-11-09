@@ -7,6 +7,13 @@
     tools:parentTag="android.widget.FrameLayout"
     >
 
+  <FrameLayout
+      android:id="@+id/code_markers"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:clipChildren="false"
+      android:clipToPadding="false" />
+
   <androidx.appcompat.widget.AppCompatTextView
       android:id="@+id/title_text_view"
       android:layout_width="wrap_content"
@@ -33,24 +40,120 @@
       android:layout_gravity="top|start"
       android:layout_margin="12dp"
       android:background="@drawable/quickie_bg_round"
+      android:contentDescription="@string/quickie_close"
       android:padding="12dp"
       android:visibility="gone"
       app:srcCompat="@drawable/quickie_ic_close"
       tools:visibility="visible"
       />
 
-  <androidx.appcompat.widget.AppCompatImageView
-      android:id="@+id/torch_image_view"
-      android:layout_width="48dp"
-      android:layout_height="48dp"
-      android:layout_gravity="top|end"
-      android:layout_margin="12dp"
-      android:background="@drawable/quickie_bg_round"
-      android:padding="12dp"
-      android:visibility="gone"
-      app:srcCompat="@drawable/quickie_ic_torch"
-      tools:visibility="visible"
-      />
+  <LinearLayout
+      android:id="@+id/bottom_controls"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom|center_horizontal"
+      android:layout_marginHorizontal="12dp"
+      android:layout_marginBottom="24dp"
+      android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/selection_actions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/selection_hint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/quickie_bg_control"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="@string/quickie_tap_code"
+        android:textColor="@color/quickie_ink"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/resume_scanning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/quickie_bg_control"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:minHeight="52dp"
+        android:paddingHorizontal="12dp"
+        android:text="@string/quickie_scan_again"
+        android:textColor="@color/quickie_ink"
+        android:textSize="13sp"
+        android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/live_controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/gallery_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/quickie_bg_control"
+        android:clickable="true"
+        android:focusable="true"
+        android:drawablePadding="6dp"
+        android:gravity="center"
+        android:minHeight="52dp"
+        android:paddingHorizontal="16dp"
+        android:text="@string/quickie_from_photos"
+        android:textColor="@color/quickie_ink"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:drawableStartCompat="@drawable/quickie_ic_gallery"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/zoom_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.2"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/quickie_bg_control"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="@string/quickie_zoom_adjust"
+        android:gravity="center"
+        android:minHeight="52dp"
+        android:paddingHorizontal="14dp"
+        android:text="@string/quickie_zoom_initial"
+        android:textColor="@color/quickie_ink"
+        android:textSize="12sp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/torch_image_view"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:background="@drawable/quickie_bg_control"
+        android:contentDescription="@string/quickie_torch"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="14dp"
+        android:visibility="gone"
+        app:srcCompat="@drawable/quickie_ic_torch"
+        app:tint="@color/quickie_ink"
+        tools:visibility="visible" />
+    </LinearLayout>
+  </LinearLayout>
 
   <LinearLayout
       android:id="@+id/progress_view"
@@ -86,5 +189,14 @@
         style="@style/TextAppearance.AppCompat.Subhead"
         />
   </LinearLayout>
+
+  <io.github.g00fy2.quickie.FanZoomView
+      android:id="@+id/zoom_fan"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:clickable="false"
+      android:focusable="false"
+      android:importantForAccessibility="no"
+      android:visibility="gone" />
 
 </merge>

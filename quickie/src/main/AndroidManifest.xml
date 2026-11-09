@@ -11,6 +11,11 @@
   <application>
 
     <activity
+        android:name=".QRImageScannerActivity"
+        android:exported="false"
+        android:theme="@style/QuickieImageScannerActivity"/>
+
+    <activity
         android:name=".QRScannerActivity"
         android:screenOrientation="behind"
         android:theme="@style/QuickieScannerActivity"

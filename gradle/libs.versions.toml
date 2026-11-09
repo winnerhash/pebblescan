@@ -16,6 +16,7 @@ cameraX = "1.6.1"
 
 barcodeScanning = "17.3.0"
 barcodeScanningGms = "18.3.1"
+zxing = "3.5.4"
 
 materialDesign = "1.14.0"
 
@@ -23,6 +24,8 @@ detekt = "2.0.0-alpha.3"
 dokka = "2.2.0"
 
 junit = "6.1.0"
+junit4 = "4.13.2"
+robolectric = "4.16.1"
 
 [libraries]
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
@@ -33,11 +36,14 @@ androidx-core = { module = "androidx.core:core-ktx", version.ref = "core" }
 
 mlkit-barcodeScanning = { module = "com.google.mlkit:barcode-scanning", version.ref = "barcodeScanning" }
 mlkit-barcodeScanningGms = { module = "com.google.android.gms:play-services-mlkit-barcode-scanning", version.ref = "barcodeScanningGms" }
+zxing-core = { module = "com.google.zxing:core", version.ref = "zxing" }
 
 google-materialDesign = { module = "com.google.android.material:material", version.ref = "materialDesign" }
 
 test-junit = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
 test-junit-platformLauncher = { module = "org.junit.platform:junit-platform-launcher" }
+test-junit4 = { module = "junit:junit", version.ref = "junit4" }
+test-robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectric" }
 
 detekt-ktlintWrapper = { module = "dev.detekt:detekt-rules-ktlint-wrapper", version.ref = "detekt" }
 

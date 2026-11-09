@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+  <color name="quickie_surface">#FFF8EB</color>
+  <color name="quickie_ink">#3D344B</color>
   <color name="quickie_gray">#dadce0</color>
   <color name="quickie_white">#ffffff</color>
   <color name="quickie_transparent">#00000000</color>

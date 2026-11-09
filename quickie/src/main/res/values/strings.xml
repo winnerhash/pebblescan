@@ -19,7 +19,29 @@
      wifi_dpp_scan_qr_code and master_clear_progress_text wording form the
      aosp settings app strings.
  -->
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
+  <string name="quickie_focus" tools:ignore="MissingTranslation">Tap to focus</string>
+  <string name="quickie_from_photos" tools:ignore="MissingTranslation">Photos</string>
+  <string name="quickie_close" tools:ignore="MissingTranslation">Close scanner</string>
+  <string name="quickie_torch" tools:ignore="MissingTranslation">Turn flashlight on</string>
+  <string name="quickie_torch_off" tools:ignore="MissingTranslation">Turn flashlight off</string>
+  <string name="quickie_zoom_initial" tools:ignore="MissingTranslation">Auto · 1.0×\nHold and slide</string>
+  <string name="quickie_zoom_auto" tools:ignore="MissingTranslation">Auto · %1$.1f×</string>
+  <string name="quickie_zoom_manual" tools:ignore="MissingTranslation">Manual · %1$.1f×</string>
+  <string name="quickie_zoom_adjust" tools:ignore="MissingTranslation">Hold and slide along the arc to zoom; tap to resume auto</string>
+  <string name="quickie_zoom_hold" tools:ignore="MissingTranslation">Hold and slide</string>
+  <string name="quickie_zoom_hint" tools:ignore="MissingTranslation">Release to keep · tap to resume auto</string>
+  <string name="quickie_zoom_control" tools:ignore="MissingTranslation">%1$s\n%2$s</string>
+  <string name="quickie_zoom_value" tools:ignore="MissingTranslation">%1$.1f×</string>
+  <string name="quickie_zoom_resume" tools:ignore="MissingTranslation">Resume auto</string>
+  <string name="quickie_preview_gestures" tools:ignore="MissingTranslation">Tap to focus, pinch to zoom</string>
+  <string name="quickie_no_barcode_found" tools:ignore="MissingTranslation">No QR code or barcode found. Try a clearer image.</string>
+  <string name="quickie_choose_barcode" tools:ignore="MissingTranslation">Choose a code</string>
+  <string name="quickie_tap_code" tools:ignore="MissingTranslation">Multiple codes found · tap a dot to view</string>
+  <string name="quickie_frame_held" tools:ignore="MissingTranslation">Frame held · tap a dot to view</string>
+  <string name="quickie_scan_again" tools:ignore="MissingTranslation">Scan again</string>
+  <string name="quickie_view_code" tools:ignore="MissingTranslation">View code %1$d</string>
+  <string name="quickie_binary_barcode" tools:ignore="MissingTranslation">Binary barcode</string>
   <string name="quickie_scan_qr_code">Scan QR code</string>
   <string name="quickie_please_wait">Please wait…</string>
 </resources>

@@ -1,3 +1,5 @@
+rootProject.name = "PebbleScan"
+
 include(":quickie", ":sample")
 
 dependencyResolutionManagement {

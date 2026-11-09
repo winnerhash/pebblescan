@@ -182,3 +182,7 @@ $RECYCLE.BIN/
 
 # Directory for Kotlin data in Gradle projects
 .kotlin/
+# Local build artifacts and engineering notes
+/artifacts/
+/LOCAL-CHANGES.md
+/SCANNER-PERFORMANCE.md

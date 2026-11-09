@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+  <style name="Theme.Quickie" parent="Theme.Material3.Light.NoActionBar">
+    <item name="colorPrimary">@color/purple</item>
+    <item name="colorOnPrimary">@color/paper</item>
+    <item name="colorSecondary">@color/purple</item>
+    <item name="colorAccent">@color/purple</item>
+    <item name="colorSurface">@color/paper</item>
+    <item name="colorOnSurface">@color/ink</item>
+    <item name="colorSurfaceVariant">@color/lavender</item>
+    <item name="colorOnSurfaceVariant">@color/ink_soft</item>
+    <item name="colorOutline">@color/outline_soft</item>
+    <item name="android:colorBackground">@color/paper</item>
+    <item name="android:windowBackground">@color/paper</item>
+    <item name="android:fontFamily">sans-serif</item>
+    <item name="android:statusBarColor">@color/paper</item>
+    <item name="android:navigationBarColor">@color/paper</item>
+    <item name="android:windowLightStatusBar">true</item>
+    <item name="materialAlertDialogTheme">@style/ThemeOverlay.Quickie.Dialog</item>
+    <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Quickie.BottomSheet</item>
+  </style>
+
+  <style name="ThemeOverlay.Quickie.BottomSheet" parent="ThemeOverlay.Material3.BottomSheetDialog">
+    <item name="bottomSheetStyle">@style/Widget.Quickie.BottomSheet</item>
+    <item name="android:navigationBarColor">@color/paper</item>
+  </style>
+
+  <style name="Widget.Quickie.BottomSheet" parent="Widget.Material3.BottomSheet.Modal">
+    <item name="backgroundTint">@color/paper</item>
+    <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Quickie.Dialog</item>
+  </style>
+
+  <style name="ThemeOverlay.Quickie.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+    <item name="colorSurface">@color/paper</item>
+    <item name="colorPrimary">@color/purple</item>
+    <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Quickie.Dialog</item>
+  </style>
+
+  <style name="ShapeAppearance.Quickie.Dialog" parent="">
+    <item name="cornerFamily">rounded</item>
+    <item name="cornerSize">28dp</item>
+  </style>
+
+  <style name="QuickieImageScannerActivity" parent="Theme.Quickie" tools:override="true" />
+
+  <style name="Widget.Quickie.Card" parent="Widget.Material3.CardView.Filled">
+    <item name="cardCornerRadius">28dp</item>
+    <item name="cardElevation">0dp</item>
+    <item name="strokeColor">@color/ink</item>
+    <item name="strokeWidth">1.5dp</item>
+    <item name="rippleColor">#183D344B</item>
+    <item name="android:stateListAnimator">@animator/card_press</item>
+    <item name="android:clickable">true</item>
+    <item name="android:focusable">true</item>
+  </style>
+
+  <style name="TextAppearance.Quickie.Title" parent="TextAppearance.Material3.TitleLarge">
+    <item name="android:textColor">@color/ink</item>
+    <item name="android:fontFamily">sans-serif-medium</item>
+    <item name="android:textSize">21sp</item>
+  </style>
+
+  <style name="TextAppearance.Quickie.Body" parent="TextAppearance.Material3.BodyMedium">
+    <item name="android:textColor">@color/ink_soft</item>
+    <item name="android:textSize">13sp</item>
+    <item name="android:lineSpacingExtra">3dp</item>
+  </style>
+</resources>

@@ -14,4 +14,6 @@ internal class ParcelableScannerConfig(
   val useFrontCamera: Boolean,
   val showCloseButton: Boolean,
   val keepScreenOn: Boolean,
+  val showGalleryButton: Boolean,
+  val autoZoom: Boolean,
 ) : Parcelable
