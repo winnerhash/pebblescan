@@ -4,6 +4,7 @@ import android.os.Bundle
 import io.github.g00fy2.quickie.content.QRContent
 import java.net.IDN
 import java.net.URI
+import java.util.Locale
 
 internal data class ResultPresentation(
   val text: String,
@@ -35,7 +36,7 @@ internal data class ResultPresentation(
   companion object {
     fun from(content: QRContent): ResultPresentation {
       val text = content.rawValue?.takeIf { it.isNotBlank() }
-        ?: content.rawBytes?.joinToString(" ") { "%02X".format(it) }.orEmpty()
+        ?: content.rawBytes?.joinToString(" ") { "%02X".format(Locale.ROOT, it) }.orEmpty()
       return ResultPresentation(
         text = text,
         url = (content as? QRContent.Url)?.url,

@@ -33,7 +33,7 @@ internal class CodeMarkers(private val owner: View, private val container: Frame
     val ids = markers.map { it.id }.toSet()
     buttons.keys.filterNot { it in ids }.forEach { id ->
       buttons.remove(id)?.let {
-        actions.remove(it)
+        actions -= it
         container.removeView(it)
       }
     }

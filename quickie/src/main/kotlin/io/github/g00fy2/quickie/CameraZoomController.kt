@@ -71,6 +71,7 @@ internal class CameraZoomController(
       task.addListener({
         var succeeded = false
         try {
+          @Suppress("IgnoredReturnValue") // The future has no result value; get() reports failure or cancellation.
           task.get()
           succeeded = true
         } catch (ignored: Exception) {

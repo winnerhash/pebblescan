@@ -9,6 +9,8 @@ A lightweight Android scanner for QR codes and product barcodes. Scans run on th
 - **One-handed zoom:** Hold the zoom button and slide along the arc, or pinch the preview.
 - **Readable results:** Preview link destinations, inspect Wi-Fi details, and copy or share decoded content.
 
+[Download the APK](https://github.com/winnerhash/pebblescan/releases/latest)
+
 ## Build
 
 Use JDK 21 and Android SDK 36 (Build Tools 36.1.0):
